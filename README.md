@@ -15,22 +15,28 @@
     * Issues: Issue tracking for user stories, features and bug report
   * Functionality - refer to [video of application user flow](https://drive.google.com/open?id=1w2IGKzNlyG6x5EZ1JKubm2RC0xodmi3Q):
     * Design Description
-      * Web application server
+      * Application Setup (server.js)
         * Configure Express web app server listening on process.env.PORT (Heroku) or default to 8080. Parse URL encoded, any type including nested objects, and JSON and call appropriate routing.
-        * Required Modules: npm (express, express-handlebars, method-override, body-parser)
+        * Required modules: npm (express, express-handlebars, method-override, body-parser)
         * Relevant functions: require(), use(), engine(), set(), listen() 
-        * Relevant modules: server.js
-      * SQL Database
+      * Database Setup (schema.sql, seeds.sql)
         * Create burgers_db database and burgers table with attributes (burger_name, devoured, date) with id as primary key
-        * Seed with burgers table with 3 burgers
-        * Relevant modules: schema.sql, seeds.sql
-      * Routing
+        * Seed with burgers table with 4 burgers
+      * Configuration Setup (connection.js, orm.js)
+        * Configure MySQL and ORM configuration
+        * Assign methods to ORM object, selectAll(), insertOne() and updateOne() methods, respectively for Read, Create and Update operations
+        * Declare functions for 2 helper functions to support queries in SQL syntax
+        * Required modules: npm (mysql)
+        * Relevant functions: require(), createConnection(), connect(), exports(), printQuestionMarks(), objToSql(), selectAll(), insertOne(), updateOne(), query()
+      * 
         * Configure routing for viewing HTML pages and API friends data object
         * calculateMatch() function determines best match based on least total difference in survey question responses, for new friend compared to existing friends 
         * Required Modules: friends.js, path (built-in to Node)
         * Relevant functions: require(), exports(), get(), sendFile(), join(), post(), json(), push(), calculateMatch()
         * Relevant modules: htmlRoutes.js, apiRoutes.js
-      * View Layout
+      * Controller Setup
+      * Model Setup
+      * View Setup
         * Boilerplate includes HTML5 doctype and viewport meta tag along with Bootstrap CSS jQuery, Popper.js, Bootstrap
         * Footer container includes API friends link used to route for retrieving friends 
         * Home page
