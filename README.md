@@ -26,16 +26,17 @@
         * Configure MySQL and ORM configuration
         * Assign methods to ORM object, selectAll(), insertOne() and updateOne() methods, respectively for Read, Create and Update operations
         * Declare functions for 2 helper functions to support queries in SQL syntax
-        * Required modules: npm (mysql)
+        * Required modules: npm (mysql), connection.js
         * Relevant functions: require(), createConnection(), connect(), exports(), printQuestionMarks(), objToSql(), selectAll(), insertOne(), updateOne(), query()
-      * 
+      * Model Setup (burger.js)
+        * Assign ORM methods (Read, to burger object
+        * Required modules: orm.js
+        * Relevant functions: require(), exports(), selectAll(), insertOne(), updateOne()
+      * Controller Setup (burger_controller.js)
         * Configure routing for viewing HTML pages and API friends data object
         * calculateMatch() function determines best match based on least total difference in survey question responses, for new friend compared to existing friends 
-        * Required Modules: friends.js, path (built-in to Node)
-        * Relevant functions: require(), exports(), get(), sendFile(), join(), post(), json(), push(), calculateMatch()
-        * Relevant modules: htmlRoutes.js, apiRoutes.js
-      * Controller Setup
-      * Model Setup
+        * Required modules: friends.js, path (built-in to Node)
+        * Relevant functions: require(), exports()
       * View Setup
         * Boilerplate includes HTML5 doctype and viewport meta tag along with Bootstrap CSS jQuery, Popper.js, Bootstrap
         * Footer container includes API friends link used to route for retrieving friends 
