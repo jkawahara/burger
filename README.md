@@ -19,6 +19,7 @@
         * Configure Express web app server listening on process.env.PORT (Heroku) or default to 8080. Parse URL encoded, any type including nested objects, and JSON and call appropriate routing.
         * Required modules: npm (express, express-handlebars, method-override, body-parser)
         * Relevant functions: require(), use(), engine(), set(), listen() 
+        * Export: N/A
       * Database Setup (schema.sql, seeds.sql)
         * Create burgers_db database and burgers table with attributes (burger_name, devoured, date) with id as primary key
         * Seed with burgers table with 4 burgers
@@ -28,15 +29,17 @@
         * Declare functions for 2 helper functions to support queries in SQL syntax
         * Required modules: npm (mysql), connection.js
         * Relevant functions: require(), createConnection(), connect(), exports(), printQuestionMarks(), objToSql(), selectAll(), insertOne(), updateOne(), query()
+        * Export: connection, orm
       * Model Setup (burger.js)
-        * Assign ORM methods (Read, to burger object
+        * Define ORM selectAll(), insertOne() and updateOne() methods in burger object
         * Required modules: orm.js
         * Relevant functions: require(), exports(), selectAll(), insertOne(), updateOne()
+        * Export: burger
       * Controller Setup (burger_controller.js)
-        * Configure routing for viewing HTML pages and API friends data object
-        * calculateMatch() function determines best match based on least total difference in survey question responses, for new friend compared to existing friends 
-        * Required modules: friends.js, path (built-in to Node)
-        * Relevant functions: require(), exports()
+        * Assign routing for views to router: operations (Read, Create, Update), respectively for HTTP requests (get, post, put)
+        * Required modules: npm (express), burger.js
+        * Relevant functions: require(), exports(), get(), post(), put()
+        * Export: router
       * View Setup
         * Boilerplate includes HTML5 doctype and viewport meta tag along with Bootstrap CSS jQuery, Popper.js, Bootstrap
         * Footer container includes API friends link used to route for retrieving friends 
@@ -65,6 +68,7 @@
           * [method-override](https://www.npmjs.com/package/method-override)
           * [mysql](https://www.npmjs.com/package/mysql)
     * Client-side: HTML, CSS, JavaScript
+    * Cloud: [Heroku]() with [JawsDB plugin]()
   * Installing:
     * For further development or use of this application, clone or download application files from GitHub, which is organized into the following directory structure:
       * /burger (application root directory level)

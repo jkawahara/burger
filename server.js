@@ -4,11 +4,11 @@ var exphbs = require('express-handlebars');
 var methodOverride = require('method-override');
 var bodyParser = require('body-parser');
 
-// Assign app to Express
+// Assign Express to app
 var app = express();
-// Assign PORT to Heroku port or 8080
+// Assign Heroku port or 8080 to PORT
 var PORT = process.env.PORT || 8080;
-// Assign routes to Create routes
+// Assign burgers_controller.js to routes
 var routes = require('./controllers/burgers_controller')(app);
 
 // *** Express configuration
