@@ -5,7 +5,7 @@ USE burgers_db;
 
 -- Create table burgers: burger_name, devoured, date 
 CREATE TABLE burgers (
-  id INT(4) AUTO_INCREMENT,
+  id INT(4) AUTO_INCREMENT NOT NULL,
   burger_name VARCHAR(100) NOT NULL,
   devoured BOOLEAN DEFAULT false,
   date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
