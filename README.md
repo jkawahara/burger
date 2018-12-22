@@ -41,7 +41,7 @@
         * Relevant functions: require(), exports(), get(), post(), put()
         * Export: router
       * View Setup (server-side: main.handlebars, index.handlebars, burger-block.handlebars, client-side: views.js, burger_style.css, burger.img)
-        * There are no client-side HTML assets, however, views.js asset for HTTP requests (PUT, POST); the burger_style.css asset has been included but not used
+        * There are no client-side HTML assets, however, use views.js asset for HTTP requests (PUT, POST) and burger_style.css asset for background color
         * Use Handlebars.js as web templating system for main layout, index and burger-block partial
         * main.handlebars: include boilerplate HTML5 doctype and viewport meta tag along with Bootstrap CSS and jQuery
         * index.handlebars: use Bootstrap grid layout for positioning burgers 2 columns based on devoured state and form (add new burger)
