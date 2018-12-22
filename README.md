@@ -25,6 +25,7 @@
         * Available Seed with 4 burgers
       * Configuration Setup (connection.js, orm.js)
         * Configure MySQL and ORM configuration
+        * Include connection conditional to enable MySQL with Heroku deployment using JawsDB add-on
         * Assign methods to ORM object, selectAll(), insertOne() and updateOne() methods, respectively for Read, Create and Update operations
         * Declare functions for 2 helper functions to support queries in SQL syntax
         * Required modules: npm (mysql), connection.js
