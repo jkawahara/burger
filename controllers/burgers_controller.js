@@ -6,23 +6,23 @@ var burger = require('../models/burger');
 var router = express.Router();
 // Read operation for get request
 router.get("/", function(req, res) {
-  burger.all(function(data) {
+  burger.selectAll(function(data) {
     var hbsObject = {
-      burger: data
+      burgers: data
     };
     res.render("index", hbsObject);
   });
 });
 // Create operation for post request 
-router.post("/api/burger", function(req, res) {
-  burger.create(["burger_name", "devoured"], [req.body.burger_name, req.body.devoured], function(result) {
+router.post("/api/burgers", function(req, res) {
+  burger.insertOne(["burger_name", "devoured"], [req.body.burger_name, req.body.devoured], function(result) {
     res.json({ id: result.insertId });
   });
 });
 // Update operation for put request
-router.put("/api/burger/:id", function(req, res) {
+router.put("/api/burgers/:id", function(req, res) {
   var condition = "id = " + req.params.id;
-  burger.update(
+  burger.updateOne(
     {
       devoured: req.body.devoured
     },

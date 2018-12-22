@@ -9,7 +9,7 @@ var app = express();
 // Assign Heroku port or 8080 to PORT
 var PORT = process.env.PORT || 8080;
 // Assign burgers_controller.js to routes
-var routes = require('./controllers/burgers_controller')(app);
+var routes = require('./controllers/burgers_controller');
 
 // *** Express configuration
 // Static content served from /public directory

@@ -21,7 +21,7 @@ function objToSql(ob) {
       if (typeof value === "string" && value.indexOf(" ") >= 0) {
         value = "'" + value + "'";
       }
-      // E.g. {sleepy: true} => ["sleepy=true"]
+      // E.g. {devoured: true} => ["devoured=true"]
       arr.push(key + "=" + value);
     }
   }
@@ -34,7 +34,6 @@ var orm = {
   // Read operation for all table fields
   selectAll: function(tableInput, cb) {
     var queryString = "SELECT * FROM " + tableInput + ";";
-
     connection.query(queryString, function(err, result) {
       if (err) {
         throw err;
