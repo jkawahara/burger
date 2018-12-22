@@ -8,7 +8,11 @@
  ### 2. What / Objectives / User Stories
   * This project development, from design through deployment of the application, used Node.js, Express.js and MySQL as the primary web development technologies on the server-side along with HTML/CSS/JS on the client-side:
   * User Stories, by categorization:
-    * 
+    * Set up web application framework using Express
+    * Set up MySQL database schema and seeds
+    * Set up Model including ORM and database connection
+    * Set up View templates
+    * Set up Controller routing including HTTP requests/responses 
  ### 3. How / Design Description
   * The scope of the project fits ell into [Agile methodology with Scrum and Kanban frameworks](https://en.wikipedia.org/wiki/Agile_software_development). Due to limited scope and non-group assignment, GitHub's built-in tools were not used to support project execution:
     * Projects: Kanban board for documenting user stories and overall progress
